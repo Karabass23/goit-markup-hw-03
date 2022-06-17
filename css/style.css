@@ -13,10 +13,10 @@
 :root {
     --primary-text-color:#757575;
     --title-text-color: #212121;
-    --primary-section-color: #FFFFFF;
-    --visual-text-color: #2196F3;
-    --header-footer-color: #2F303A; 
-    --additional-section-color: #F5F4FA;
+    --primary-section-color: #fff;
+    --visual-text-color: #2196f3;
+    --header-footer-color: #2f303a; 
+    --additional-section-color: #f5f4fA;
 }
 
 body {
@@ -28,6 +28,8 @@ body {
 
 ul {
     list-style: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 a {
@@ -35,20 +37,30 @@ a {
 }
 
 button {
-    font-family: inherit;
     cursor: pointer;
 }
 
 /* Шапка сайта */
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 15px;
+    outline: 2px solid tomato;
+}
+
 /* Лого */
 .logo {
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
 }
 
 .nav .logo {
+    display: inline-block;
+    margin: 24px 0 25px 0;
     color: var(--title-text-color)    
 }
 
@@ -56,6 +68,16 @@ button {
     color: var(--visual-text-color);
 }
 
+.footer .logo {
+    display: inline-block;
+    margin: 60px 0px 20px 0px;
+    color: var(--primary-section-color);
+}
+
+.logo:hover,
+.logo:focus {
+    color: var(--visual-text-color);
+}
 
 /* Навигация */
 
@@ -68,20 +90,15 @@ button {
 }
 
 .site-nav .link:hover,
-.site-nav .link:focus{
-    color: var(--visual-text-color);
-}
-
-.site-nav .portfolio-active {
-    color: var(--visual-text-color);
-}
-
-.site-nav .studio-active {
-    color: var(--visual-text-color);
-}
-
+.site-nav .link:focus,
+.footer .link:hover,
+.footer .link:focus,
 .auth-nav .link:hover,
 .auth-nav .link:focus {
+    color: var(--visual-text-color);
+}
+
+.site-nav .current {
     color: var(--visual-text-color);
 }
 
@@ -99,27 +116,32 @@ button {
 
 .hero {
     background-color: var(--header-footer-color);
+    text-align: center;
 }
 
 .hero .title {
+    margin: 0px 0px 30px 0px;
     color: var(--primary-section-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    
 }
 
 .hero .button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px 32px;
+    border: 0;
+
     color: var(--primary-section-color);
     background-color: var(--visual-text-color);
+
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
 }
 
@@ -132,6 +154,7 @@ button {
 /* Особенности */
 
 .feauturies .title {
+    margin: 0px 0px 10px 0px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
@@ -140,6 +163,7 @@ button {
 }
 
 .feauturies .text {
+    margin: 0px;
     font-size: 14px;
     line-height: 1.7;
 }
@@ -147,6 +171,7 @@ button {
 /* Чем мы занимаемся*/
 
 .specifics .title {
+    margin: 94px 0px 50px 0px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -157,6 +182,7 @@ button {
 /* Наша команда */
 
 .team .title {
+    margin: 188px 0px 50px 0px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -165,6 +191,7 @@ button {
 }
 
 .team .name {
+    margin: 30px 0px 10px 0px;
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -173,6 +200,7 @@ button {
 }
 
 .team .job {
+    margin: 0px;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
@@ -194,12 +222,22 @@ button {
 }
 
 .portfolio .button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 6px 22px;
+    border: 0;
+
     color: var(--title-text-color);
     background-color: var(--additional-section-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
+}
+
+.button.current {
+    color: var(--primary-section-color);
+    background-color: var(--visual-text-color);
 }
 
 .portfolio .title {
@@ -221,15 +259,12 @@ button {
     background-color: var(--header-footer-color);
 }
 
-.footer .logo {
-    color: var(--primary-section-color);
-}
-
 .footer .address {
     font-style: normal;
 }
 
 .footer .text {
+    margin: 0px 0px 9px 0px;
     color: var(--primary-section-color);
     font-size: 14px;
     line-height: 1.7;
@@ -242,12 +277,7 @@ button {
     line-height: 1.7;
 }
 
-.logo:focus,
-.logo:hover {
-    color: var(--visual-text-color);
-}
-
-.footer .link:hover,
-.footer .link:focus {
-    color: var(--visual-text-color);
+.link.last {
+    display: inline-block;
+    margin: 9px 0px 60px 0px;
 }
