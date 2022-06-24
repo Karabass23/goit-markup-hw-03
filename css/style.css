@@ -279,7 +279,7 @@ h1, h2, h3, h4, p {
 }
 
 .team .name {
-    margin: 30px 0px 10px 0px;
+    margin-bottom: 10px;
 
     color: var(--title-text-color);
     font-weight: 500;
@@ -289,11 +289,13 @@ h1, h2, h3, h4, p {
 }
 
 .team .job {
-    margin-bottom: 30px;
-
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
+}
+
+.team-wrapper {
+    padding: 30px 0px;
 }
 
 .team .list {
@@ -389,17 +391,20 @@ h1, h2, h3, h4, p {
 }
 
 .footer .text {
+    margin-bottom: 9px;
+
     color: var(--primary-section-color);
     font-size: 14px;
     line-height: 1.7;
 }
 
 .footer .link {
-    display: block;
-    margin-top: 9px;
-
     color: var(--primary-text-color);
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
+}
+
+.footer .item {
+    margin-bottom: 9px;
 }
